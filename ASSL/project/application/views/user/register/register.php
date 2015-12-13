@@ -3,21 +3,65 @@
 
 <style>
     label{
-    color: #1f1d1d;
-}
-
+        color: #fff;
+    }
     h1{
-    color: #1f1d1d;
-}
-    .waffle{
-    background-color: #eee;
-    width: 100%;
-    padding: 3%;
-    color: #1f1d1d;
-}
+        color: white;
+    }
 
-    .log{
-    border-bottom: 1px solid #1f1d1d ;
+    h2{
+        color: white;
+        font-size: 30px;
+    }
+
+    h3{
+        color: white;
+        font-size: 26px;
+    }
+    .waffle{
+        background-color: #262626;
+        width: 100%;
+        padding: 3%;
+        opacity: .9;
+        color: white;
+        border-right: 1px solid white;
+    }
+
+
+    p{
+        color: white;
+    }
+
+
+
+    .container{
+        width: 95%;
+    }
+
+    .ban1{
+        text-align: center;
+        padding: 2%;
+        border-right: 1px solid white ;
+        border-left: 1px solid white ;
+    }
+    .ban{
+        text-align: center;
+        padding: 2%;
+        background-color: #262626;
+        opacity: .9;
+        color: white;
+    }
+    .space{
+        padding: 1%;
+
+    }
+
+    .muffin{
+        border-right: 1px solid white;
+    }
+
+    .ham{
+        padding-left: 30%;
     }
 
     .container{
@@ -73,20 +117,20 @@
                                 <p class="help-block">At least 6 characters</p>
 
                             <label for="password_confirm">Confirm password</label>
-                             <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Confirm your password">
-                                <p class="help-block">Must match your password</p>
+<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Confirm your password">
+<p class="help-block">Must match your password</p>
 
-                            <input type="submit" class="btn btn-primary" value="Register">
-                        </div>
-                        <div class="col-lg-6">
-                            <h2>What does being a profile member offer?</h2>
-                            <p>Having your own profile at Vape School offers many great advantages. Not only will you ba able to access certain content, but you will be able to do more with our site. Are you owner of a business looking for employees? or are you anverage joe looking for a job in the industry? Well Here at Vape School, being a member would allow you to not only post jobs, but access them as well. We are offering an email system that will let you talk directly to employers/Prospects. There are many more ways we are looking to help. So if you do not have a membership, fill out this form and click register and you are good to go!</p>
-                        </div>
-                    </div>
-                </div>
-            </form>
+<input type="submit" class="btn btn-primary" value="Register">
+</div>
+<div class="col-lg-6">
+    <h2>What does being a profile member offer?</h2>
+    <p>Having your own profile at Vape School offers many great advantages. Not only will you ba able to access certain content, but you will be able to do more with our site. Are you owner of a business looking for employees? or are you anverage joe looking for a job in the industry? Well Here at Vape School, being a member would allow you to not only post jobs, but access them as well. We are offering an email system that will let you talk directly to employers/Prospects. There are many more ways we are looking to help. So if you do not have a membership, fill out this form and click register and you are good to go!</p>
+</div>
+</div>
+</div>
+</form>
 
-        </div>
+</div>
 
-    </div><!-- .row -->
+</div><!-- .row -->
 </div><!-- .container -->

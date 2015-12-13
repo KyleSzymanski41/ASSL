@@ -1,6 +1,6 @@
 
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+
 /**
  * User_model class.
  *
@@ -44,6 +44,16 @@ class User_model extends CI_Model {
         return $this->db->insert('users', $data);
 
     }
+
+
+
+
+
+
+
+
+
+
 
     /**
      * resolve_user_login function.
@@ -95,6 +105,15 @@ class User_model extends CI_Model {
 
     }
 
+    public function update_user($user_id) {
+
+        $this->db->from('users');
+        $this->db->where('id', $user_id);
+        return $this->db->get()->row();
+
+    }
+
+
     /**
      * hash_password function.
      *
@@ -121,5 +140,9 @@ class User_model extends CI_Model {
         return password_verify($password, $hash);
 
     }
+
+
+
+
 
 }

@@ -89,6 +89,11 @@ class User extends CI_Controller {
 
     }
 
+
+
+
+
+
     /**
      * login function.
      *
@@ -129,13 +134,16 @@ class User extends CI_Controller {
                 // set session user datas
                 $_SESSION['user_id']      = (int)$user->id;
                 $_SESSION['username']     = (string)$user->username;
+                $_SESSION['fname']     = (string)$user->fname;
+                $_SESSION['lname']     = (string)$user->lname;
+                $_SESSION['email']     = (string)$user->email;
                 $_SESSION['logged_in']    = (bool)true;
                 $_SESSION['is_confirmed'] = (bool)$user->is_confirmed;
                 $_SESSION['is_admin']     = (bool)$user->is_admin;
 
                 // user login ok
                 $this->load->view('templates/header');
-                $this->load->view('user/login/login_success', $data);
+                $this->load->view('user/login/profile', $data);
                 $this->load->view('templates/footer');
 
             } else {
@@ -153,6 +161,9 @@ class User extends CI_Controller {
         }
 
     }
+
+
+
 
     /**
      * logout function.
@@ -187,5 +198,4 @@ class User extends CI_Controller {
 
     }
 
-
-}
+    }

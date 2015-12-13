@@ -1,11 +1,13 @@
 <?php
-class News extends CI_Controller {
+class News extends CI_Controller
+{
 
     public function __construct()
     {
         parent::__construct();
         $this->load->model('news_model');
         $this->load->helper('url_helper');
+        $this->load->database();
     }
 
     public function index()
@@ -22,8 +24,7 @@ class News extends CI_Controller {
     {
         $data['news_item'] = $this->news_model->get_news($slug);
 
-        if (empty($data['news_item']))
-        {
+        if (empty($data['news_item'])) {
             show_404();
         }
 
@@ -33,6 +34,7 @@ class News extends CI_Controller {
         $this->load->view('news/view', $data);
         $this->load->view('templates/footer');
     }
+
     public function create()
     {
         $this->load->helper('form');
@@ -43,15 +45,12 @@ class News extends CI_Controller {
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('text', 'Text', 'required');
 
-        if ($this->form_validation->run() === FALSE)
-        {
+        if ($this->form_validation->run() === FALSE) {
             $this->load->view('templates/header', $data);
             $this->load->view('news/create');
             $this->load->view('templates/footer');
 
-        }
-        else
-        {
+        } else {
             $this->news_model->set_news();
             $this->load->view('templates/header', $data);
             $this->load->view('news/success');
@@ -59,4 +58,39 @@ class News extends CI_Controller {
         }
     }
 
+    public function update()
+    {
+        $id = $this->uri->segment(3);
+        $data['title'] = 'Edit a Vape item';
+        $data['success'] = 0;
+
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+
+        $this->form_validation->set_rules('title','Title','required');
+        $this->form_validation->set_rules('text','text','required');
+
+        if($this->form_validation->run())
+        {
+            $data['success'] = $this->news_model->update_news($id);
+        }
+
+        $data['news_item'] = $this->news_model->get_news($slug = FALSE);
+        if(empty($data['news_item']))
+        {
+            show_404();
+        }
+
+        $this->load->view('templates/header',$data);
+        $this->load->view('news/update',$data);
+        $this->load->view('templates/footer');
+    }
+
+
+
+    public function delete($id) {
+        $this->news_model->delete_news($id);
+        $this->load->helper('url');
+        $this->index();
+    }
 }

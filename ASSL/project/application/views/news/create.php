@@ -1,28 +1,34 @@
 <style>
+
+
     label{
-        color: #1f1d1d;
+        color: white;
     }
 
     h2{
-        color: #1f1d1d;
-        font-size: 30px;
+        color: white;
     }
     .waffle{
-        background-color: #eee;
+        background-color: #262626;
         width: 100%;
         padding: 3%;
-        color: #1f1d1d;
-
-
+        opacity: .9;
+        color: white;
+        border-right: 1px solid white;
     }
 
     .log{
-        border-bottom: 1px solid #1f1d1d ;
+        border-bottom: 1px solid white ;
+        padding-bottom: 1%;
+        color: white;
     }
+
+   =
 
     textarea{
         width: 50%;
         padding: 2%;
+        color: black;
     }
 
     .container{
@@ -38,7 +44,24 @@
     }
 
     p{
+        color: white;
         font-size: 18px;
+    }
+
+    text{
+        color: black;
+    }
+
+    input{
+        color: black;
+    }
+
+    .comments-wrapper .comment-body p, .comments-wrapper .squarespace-comments .new-comment-area .input form.comment-form textarea {
+        color: #000;
+    }
+
+    .blk{
+        color: black;
     }
 </style>
 
@@ -59,14 +82,14 @@
                         <input type="input" name="title" /><br /><br>
 
                         <label for="text">About Vape</label>
-                        <textarea name="text"></textarea><br /><br>
+                        <textarea class="blk" name="text"></textarea><br /><br>
 
                         <input type="submit" name="submit" class="btn btn-primary" value="Create news item"  />
                     </div>
 
                     <div class="col-lg-6">
                         <h2>I Can make my own Post?</h2>
-                            <p>Well Come to Create a topic! Here you can post anything Vape related and the check it out on our board! Thank you for sharing!</p>
+                            <p>Welcome to Create a topic! Here you can post anything Vape related and the check it out on our board! Thank you for sharing!</p>
                     </div>
                 </div>
             </div>

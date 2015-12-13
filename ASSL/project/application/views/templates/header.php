@@ -20,8 +20,9 @@
 
 <style>
     body{
-        background-color: lightslategrey;
+
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-image: url("<?php echo base_url();?>assets/images/background.jpg");
     }
 
 
@@ -32,6 +33,8 @@
     header{
         background-color: #8d0b00;
         margin: 3%;
+
+
     }
 
     header  h1{
@@ -60,11 +63,29 @@
 
     p{
         font-size: 18px;
+
+
+    }
+
+    .navbar{
+        background-color: #262626;
+        color: white;
+    }
+    .navbar-nav{
+        background-color: #262626;
     }
 
 
 </style>
-
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <header>
     <h1>Vape School: Vaping <?php echo img('assets/images/logo.png'); ?>  has become an art!</h1>
     <nav class="navbar navbar-default">
@@ -83,7 +104,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?= base_url() ?>"> Profile <span class="sr-only"></span></a></li>
+                    <li><a href="<?= site_url('index.php/login/profile') ?>"> Profile <span class="sr-only"></span></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vape News <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -127,18 +148,5 @@
 <main id="site-content" role="main">
 
     <?php if (isset($_SESSION)) : ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-
-                <div class="jumbotron">
-                    <h1>Welcome To Vape School!</h1>
-                    <p>What is Vape School? Well in short we are a devoted group of people who have dedicated our time and knowledge to the world of vaping! We have used our expert knowledge to bring together a community that will be able to come together as one. Want to learn more, click the learn more button below!</p>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-                </div>
-
-                </div>
-            </div>
-        </div>
 
 <?php endif; ?>
