@@ -1,0 +1,181 @@
+body{
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url("<?php echo base_url();?>assets/images/background.jpg");
+    background-position: center;
+}
+
+
+
+/* header */
+header{
+    background-color: #8d0b00;
+    margin: 3%;
+
+
+}
+
+header  h1{
+    font-family: Lucida Grande, Verdana, Geneva, sans-serif;
+
+    font-size: 36px;
+    color: white;
+    text-align: center;
+
+}
+a:hover{
+    background-color: lightgray;
+}
+
+h1{
+    font-size: 36px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 18px;
+
+
+}
+
+.navbar{
+    background-color: #262626;
+    color: white;
+}
+.navbar-nav{
+    background-color: #262626;
+}
+
+
+/* styles */
+label{
+    color: #1f1d1d;
+}
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+    font-size: 30px;
+}
+
+h3{
+    color: white;
+    font-size: 26px;
+}
+.waffle{
+    background-color: #262626;
+    width: 100%;
+    padding: 3%;
+    opacity: .9;
+    color: white;
+    border-right: 1px solid white;
+}
+
+
+p{
+    color: white;
+}
+
+.must1{
+    font-size: 36px;
+    font-family: "Lucida Blackletter",Helvetica, Arial, sans-serif;
+    color: darkred;
+}
+
+.must2{
+    font-size: 36px;
+    font-family: "Lucida Blackletter",Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+.must3{
+    font-family: Lucida Grande, Verdana, Geneva, sans-serif;
+
+}
+
+/* classes*/
+.log{
+    border-bottom: 1px solid #1f1d1d ;
+}
+
+.container{
+    width: 95%;
+}
+
+.ban1{
+    text-align: center;
+    padding: 2%;
+    border-right: 1px solid white ;
+    border-left: 1px solid white ;
+}
+.ban{
+    text-align: center;
+    padding: 2%;
+    background-color: #262626;
+    opacity: .9;
+    color: white;
+}
+
+.ban2{
+    font-family: "Lucida Blackletter",Helvetica, Arial, sans-serif;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 3%;
+    padding-right: 2%;
+    background-color: #262626;
+    opacity: .9;
+    color: white;
+}
+.space{
+    padding: 1%;
+
+}
+
+.muffin{
+    border-right: 1px solid white;
+}
+
+.ham{
+    padding-left: 30%;
+}
+.container{
+    width: 95%;
+}
+/* footer */
+footer {
+    width: 100%;
+    color: white;
+    background-color: #1f1d1d ;
+    padding: 3%;
+    text-align: center;
+}
+
+/* edits */
+.moo{
+    color: black;
+}
+
+.bord{
+    border-bottom: 1px solid white;
+    padding: 5%;
+
+}
+
+.bord1{
+    border-top:1px solid white;
+    padding: 5%;
+}
+
+.log3{
+    font-size: 30px;
+    padding-bottom: 1%;
+}
